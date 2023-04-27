@@ -37,7 +37,8 @@ public class LibLibrarian implements ActionListener {
 	
 	LibLibrarian () {
 		
-		LibrarianLogin();
+//		LibrarianLogin();
+		LibraryManagement();
 	}
 	
 	void LibrarianLogin() {
@@ -183,52 +184,48 @@ public class LibLibrarian implements ActionListener {
 			String borrow = borrowField.getText();
 			
 			if(borrow.equals("0")) {
-				
-				JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(0, 1));
-				
+
 				int currentCopy = (int) table.getValueAt(0, 3);
 				int newCopy = currentCopy - 1;
 				
-				if (newCopy > 0) {
-					
-					table.setValueAt(newCopy, 0, 3);
+				if (newCopy < 0) {
+				
+					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 				else {
+					
+					JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(0, 1));
 					table.setValueAt(newCopy, 0, 3);
-					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 			}
 			else if(borrow.equals("1")) {
 				
-				JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(1, 1));
-				
 				int currentCopy = (int) table.getValueAt(1, 3);
 				int newCopy = currentCopy - 1;
 				
-				if (newCopy > 0) {
+				if (newCopy < 0) {
 					
-					table.setValueAt(newCopy, 1, 3);
+					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 				else {
+					
+					JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(1, 1));
 					table.setValueAt(newCopy, 1, 3);
-					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 			}
 			else if(borrow.equals("2")) {
 				
-				JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(2, 1));
-				
 				int currentCopy = (int) table.getValueAt(2, 3);
 				int newCopy = currentCopy - 1;
 				
-				if (newCopy > 0) {
+				if (newCopy < 0) {
 					
-					table.setValueAt(newCopy, 2, 3);
+					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 				else {
 					
+					JOptionPane.showMessageDialog(null, "You rented: " + table.getValueAt(2, 1));
 					table.setValueAt(newCopy, 2, 3);
-					JOptionPane.showMessageDialog(null, "NO COPIES AVAILABLE");
 				}
 			}
 			else {
