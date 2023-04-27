@@ -14,7 +14,7 @@ import javax.swing.table.TableColumnModel;
 
 public class LibLibrarian implements ActionListener {
 	
-	////for librarian login frame
+	//for librarian login frame
 	JFrame loginframe = new JFrame("Librarian Login Page");
 	
 	JButton loginButton = new JButton("Login");
@@ -37,8 +37,7 @@ public class LibLibrarian implements ActionListener {
 	
 	LibLibrarian () {
 		
-//		LibrarianLogin();
-		LibraryManagement();
+		LibrarianLogin();
 	}
 	
 	void LibrarianLogin() {
